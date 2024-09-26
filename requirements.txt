@@ -1,7 +1,19 @@
-streamlit==1.37.1
+# streamlit==1.37.1
+# pandas==2.0.3
+# numpy==1.24.3
+# plotly==5.23.0
+# openpyxl==3.1.5
+# setuptools==68.0.0
+# python_version >= "3.8, <3.12"
+
+streamlit==1.25.0
 pandas==2.0.3
 numpy==1.24.3
 plotly==5.23.0
 openpyxl==3.1.5
 setuptools==68.0.0
-python_version >= "3.8, <3.12"
+python_version >= "3.8,<3.12"
+certifi
+chardet
+idna
+urllib3

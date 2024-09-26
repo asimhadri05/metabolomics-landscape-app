@@ -240,6 +240,7 @@ if page == "Home":
 elif page == "Embeddings Explorer":
     st.header("Embeddings Explorer")
     with st.expander("How to use"):
+        
         st.write("""On the sidebar, input the desired research cluster and keywords, and choose whether 
                  to search in abstracts or titles. Click 'Generate Plot' to visualize t-SNE embeddings 
                  colored by publication year and keyword presence. Note: If keywords overlap in a document, 

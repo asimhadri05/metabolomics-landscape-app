@@ -243,9 +243,18 @@ elif page == "Embeddings Explorer":
         
         st.write("""On the sidebar, input the desired research cluster and keywords, and choose whether 
                  to search in abstracts or titles. Click 'Generate Plot' to visualize t-SNE embeddings 
-                 colored by publication year and keyword presence. Note: If keywords overlap in a document, 
-                 the color representing the last keyword in the list is displayed.""")
+                 colored by publication year and keyword presence. Note: If an embedding matches multiple keywords in the document, the value or color corresponding to the last keyword entered will be shown.""")
+        
 
+    with st.expander("Author Search Implementation"):
+        
+        st.write("""
+The author search identifies and highlights papers authored by a specified individual on a t-SNE scatter plot. 
+                 It extracts the author's last name and first initial, then checks each paper's list of authors for matches. 
+                 Papers by the specified author are flagged and assigned a distinct color (blue), while other papers remain gray. 
+                 The plot displays larger markers for highlighted papers, with hover text showing the paper’s title and journal. 
+                 Optional display of non-highlighted points can be toggled, and the plot is customized for clarity and aesthetic appeal. 
+                 The function returns the final visual representation.""")
     st.sidebar.header("Parameters")
     cluster_name = st.sidebar.selectbox("Select Research Cluster", options=["All embeddings"] + list(df['predicted_category'].unique()))
     keywords = st.sidebar.text_input("Enter Keywords (comma-separated)").split(',')

@@ -171,7 +171,7 @@ def highlightAuthor(author_name, show_other):
         ),
         name=author_name,
         # Create hover text with title and journal information
-        text=highlight_df.apply(lambda row: f"Title: {row['title']}<br>Journal: {row['journal_title']}", axis=1),
+        text = highlight_df.apply(lambda row: f"Title: {row['title']}<br>Journal: {row['journal_title']}<br>Date of Publication: {row['pub_year']}", axis=1),
         hoverinfo='text'
     ))
 
